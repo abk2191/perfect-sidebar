@@ -1,0 +1,263 @@
+/* Hamburger Menu Styles */
+.hamburger {
+  width: 40px;
+  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-left: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(97, 198, 97);
+  border-radius: 4px;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transform-origin: center;
+}
+
+/* Hover Effects */
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.hamburger:hover span {
+  background-color: rgb(77, 178, 77);
+  box-shadow: 0 0 6px rgba(97, 198, 97, 0.4);
+}
+
+/* X Transformation when open */
+.hamburger.open span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+  background-color: rgb(97, 198, 97);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+  background-color: rgb(97, 198, 97);
+}
+
+/* Hover effect when open */
+.hamburger.open:hover span {
+  background-color: rgb(255, 60, 60);
+  box-shadow: 0 0 8px rgba(255, 80, 80, 0.5);
+}
+
+/* Base sidebar - starts hidden */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: greenyellow;
+  color: white;
+  z-index: 999;
+  /* Initial state - hidden */
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.7),
+    0 10px 20px rgba(0, 0, 0, 0.3);
+  margin-top: 80px;
+}
+
+/* Open animation */
+.sidebar.sidebar-open {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Close animation */
+.sidebar.sidebar-close {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Remove the old button style */
+.sidebar-button {
+  display: none;
+}
+
+/* Keep all the existing sliding-div animations */
+.sliding-div {
+  animation: slideOnce 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOnce {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/******************************************************/
+.sliding-div-two {
+  animation: slideOnce2 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOnce2 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/******************************************************/
+.sliding-div-three {
+  animation: slideOnce3 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOnce3 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(13px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/******************************************************/
+.sliding-div-four {
+  animation: slideOnce4 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOnce4 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(18px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/******************************************************/
+.sliding-div-five {
+  animation: slideOnce5 0.6s ease-in-out forwards;
+}
+
+@keyframes slideOnce5 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(23px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.sliding-div-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 6px;
+  width: 100%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.item-style h2 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 35px;
+}
+
+.div-style {
+  border: 1px solid black;
+  width: 200px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(97, 198, 97);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 81px;
+  z-index: 10000;
+  position: sticky;
+  width: 100%;
+  background: greenyellow;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(186, 247, 186);
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.page-text {
+  border: 1px sold black;
+  position: relative;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  color: rgb(97, 198, 97);
+  height: 70px;
+  margin-top: 30px;
+}
+
+.page-text h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.page-text:hover {
+  text-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px greenyellow,
+    0 0 40px greenyellow, 0 0 70px greenyellow;
+}
+
+.page-text:active {
+  text-shadow: 0 0 10px greenyellow, 0 0 20px greenyellow, 0 0 30px greenyellow,
+    0 0 40px greenyellow, 0 0 70px greenyellow;
+}

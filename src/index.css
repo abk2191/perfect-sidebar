@@ -1,3 +1,9 @@
+/* Remove highlight for all elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+
 /* Hamburger Menu Styles */
 .hamburger {
   width: 40px;

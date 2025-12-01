@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div>
-      {/* Navbar with hamburger button */}
+      {/* Navbar and Sidebar Logic Starts */}
       <div className="navbar">
         <button
           className={`hamburger ${isSidebarOpen ? "open" : ""}`}
@@ -74,6 +74,7 @@ function App() {
           </div>
         </div>
       )}
+      {/* Navbar and Sidebar Logic Ends */}
 
       <div className="wrapper">
         <div className="page-text">
